@@ -1,23 +1,29 @@
- AOS.init({
- 	duration: 800,
- 	easing: 'slide'
- });
+AOS.init({
+	duration: 800,
+	easing: 'slide'
+});
+
+$.getScript('js/jquery.min.js', function(){
+	$(document).ready(function(){
+		console.log('loaded'); // Prints: Hi there!
+	});
+});
 
 (function($) {
 
 	"use strict";
 
 	$(window).stellar({
-    responsive: false,
-    parallaxBackgrounds: true,
-    parallaxElements: true,
-    horizontalScrolling: false,
-    hideDistantElements: false,
-    scrollProperty: 'scroll'
-  });
+		responsive: false,
+		parallaxBackgrounds: true,
+		parallaxElements: true,
+		horizontalScrolling: false,
+		hideDistantElements: false,
+		scrollProperty: 'scroll'
+	});
 
 
-	var fullHeight = function() {
+	let fullHeight = function() {
 
 		$('.js-fullheight').css('height', $(window).height());
 		$(window).resize(function(){
@@ -28,8 +34,8 @@
 	fullHeight();
 
 	// loader
-	var loader = function() {
-		setTimeout(function() { 
+	let loader = function() {
+		setTimeout(function() {
 			if($('#ftco-loader').length > 0) {
 				$('#ftco-loader').removeClass('show');
 			}
@@ -38,9 +44,9 @@
 	loader();
 
 	// Scrollax
-   $.Scrollax();
+	$.Scrollax();
 
-	var carousel = function() {
+	let carousel = function() {
 		$('.carousel-cause').owlCarousel({
 			autoplay: true,
 			center: true,
@@ -70,7 +76,7 @@
 	carousel();
 
 	$('nav .dropdown').hover(function(){
-		var $this = $(this);
+		let $this = $(this);
 		// 	 timer;
 		// clearTimeout(timer);
 		$this.addClass('show');
@@ -78,44 +84,44 @@
 		// $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
 		$this.find('.dropdown-menu').addClass('show');
 	}, function(){
-		var $this = $(this);
-			// timer;
+		let $this = $(this);
+		// timer;
 		// timer = setTimeout(function(){
-			$this.removeClass('show');
-			$this.find('> a').attr('aria-expanded', false);
-			// $this.find('.dropdown-menu').removeClass('animated-fast fadeInUp show');
-			$this.find('.dropdown-menu').removeClass('show');
+		$this.removeClass('show');
+		$this.find('> a').attr('aria-expanded', false);
+		// $this.find('.dropdown-menu').removeClass('animated-fast fadeInUp show');
+		$this.find('.dropdown-menu').removeClass('show');
 		// }, 100);
 	});
 
 
 	$('#dropdown04').on('show.bs.dropdown', function () {
-	  console.log('show');
+		console.log('show');
 	});
 
 	// scroll
-	var scrollWindow = function() {
+	let scrollWindow = function() {
 		$(window).scroll(function(){
-			var $w = $(this),
-					st = $w.scrollTop(),
-					navbar = $('.ftco_navbar'),
-					sd = $('.js-scroll-wrap');
+			let $w = $(this),
+				st = $w.scrollTop(),
+				navbar = $('.ftco_navbar'),
+				sd = $('.js-scroll-wrap');
 
 			if (st > 150) {
 				if ( !navbar.hasClass('scrolled') ) {
-					navbar.addClass('scrolled');	
+					navbar.addClass('scrolled');
 				}
-			} 
+			}
 			if (st < 150) {
 				if ( navbar.hasClass('scrolled') ) {
 					navbar.removeClass('scrolled sleep');
 				}
-			} 
+			}
 			if ( st > 350 ) {
 				if ( !navbar.hasClass('awake') ) {
-					navbar.addClass('awake');	
+					navbar.addClass('awake');
 				}
-				
+
 				if(sd.length > 0) {
 					sd.addClass('sleep');
 				}
@@ -133,47 +139,47 @@
 	};
 	scrollWindow();
 
-	var isMobile = {
+	let isMobile = {
 		Android: function() {
 			return navigator.userAgent.match(/Android/i);
 		},
-			BlackBerry: function() {
+		BlackBerry: function() {
 			return navigator.userAgent.match(/BlackBerry/i);
 		},
-			iOS: function() {
+		iOS: function() {
 			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
 		},
-			Opera: function() {
+		Opera: function() {
 			return navigator.userAgent.match(/Opera Mini/i);
 		},
-			Windows: function() {
+		Windows: function() {
 			return navigator.userAgent.match(/IEMobile/i);
 		},
-			any: function() {
+		any: function() {
 			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
 		}
 	};
 
-	
-	var counter = function() {
-		
+
+	let counter = function() {
+
 		$('#section-counter').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
 
-				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+				let comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
 				$('.number').each(function(){
-					var $this = $(this),
+					let $this = $(this),
 						num = $this.data('number');
-						console.log(num);
+					console.log(num);
 					$this.animateNumber(
-					  {
-					    number: num,
-					    numberStep: comma_separator_number_step
-					  }, 7000
+						{
+							number: num,
+							numberStep: comma_separator_number_step
+						}, 7000
 					);
 				});
-				
+
 			}
 
 		} , { offset: '95%' } );
@@ -181,21 +187,21 @@
 	}
 	counter();
 
-	var contentWayPoint = function() {
-		var i = 0;
+	let contentWayPoint = function() {
+		let i = 0;
 		$('.ftco-animate').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-				
+
 				i++;
 
 				$(this.element).addClass('item-animate');
 				setTimeout(function(){
 
 					$('body .ftco-animate.item-animate').each(function(k){
-						var el = $(this);
+						let el = $(this);
 						setTimeout( function () {
-							var effect = el.data('animate-effect');
+							let effect = el.data('animate-effect');
 							if ( effect === 'fadeIn') {
 								el.addClass('fadeIn ftco-animated');
 							} else if ( effect === 'fadeInLeft') {
@@ -208,9 +214,9 @@
 							el.removeClass('item-animate');
 						},  k * 50, 'easeInOutExpo' );
 					});
-					
+
 				}, 100);
-				
+
 			}
 
 		} , { offset: '95%' } );
@@ -219,25 +225,25 @@
 
 
 	// navigation
-	var OnePageNav = function() {
+	let OnePageNav = function() {
 		$(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on('click', function(e) {
-		 	e.preventDefault();
+			e.preventDefault();
 
-		 	var hash = this.hash,
-		 			navToggler = $('.navbar-toggler');
-		 	$('html, body').animate({
-		    scrollTop: $(hash).offset().top
-		  }, 700, 'easeInOutExpo', function(){
-		    window.location.hash = hash;
-		  });
+			let hash = this.hash,
+				navToggler = $('.navbar-toggler');
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top
+			}, 700, 'easeInOutExpo', function(){
+				window.location.hash = hash;
+			});
 
 
-		  if ( navToggler.is(':visible') ) {
-		  	navToggler.click();
-		  }
+			if ( navToggler.is(':visible') ) {
+				navToggler.click();
+			}
 		});
 		$('body').on('activate.bs.scrollspy', function () {
-		  console.log('nice');
+			console.log('nice');
 		})
 	};
 	OnePageNav();
@@ -245,44 +251,50 @@
 
 	// magnific popup
 	$('.image-popup').magnificPopup({
-    type: 'image',
-    closeOnContentClick: true,
-    closeBtnInside: false,
-    fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-     gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      verticalFit: true
-    },
-    zoom: {
-      enabled: true,
-      duration: 300 // don't foget to change the duration also in CSS
-    }
-  });
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+	});
 
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
+	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
 
-    fixedContentPos: false
-  });
+		fixedContentPos: false
+	});
 
 
-  $('#appointment_date').datepicker({
-	  'format': 'm/d/yyyy',
-	  'autoclose': true
+	$('#appointment_date').datepicker({
+		'format': 'm/d/yyyy',
+		'autoclose': true
 	});
 
 	$('#appointment_time').timepicker();
 
-
+	$(function () {
+		let includes = $('[data-include]')
+		$.each(includes, function () {
+			let file = 'includes/' + $(this).data('include') + '.html'
+			$(this).load(file)
+		})
+	})
 
 
 })(jQuery);
