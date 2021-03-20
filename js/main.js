@@ -3,12 +3,6 @@ AOS.init({
 	easing: 'slide'
 });
 
-$.getScript('js/jquery.min.js', function(){
-	$(document).ready(function(){
-		console.log('loaded'); // Prints: Hi there!
-	});
-});
-
 (function($) {
 
 	"use strict";
@@ -286,14 +280,12 @@ $.getScript('js/jquery.min.js', function(){
 		'autoclose': true
 	});
 
-	$('#appointment_time').timepicker();
-
-	$(function () {
-		let includes = $('[data-include]')
-		$.each(includes, function () {
-			let file = 'includes/' + $(this).data('include') + '.html'
-			$(this).load(file)
-		})
+	$('#appointment_time').timepicker();`
+	`
+	let includes = $('[data-include]')
+	$.each(includes, function () {
+		let file = 'includes/' + $(this).data('include') + '.html'
+		$(this).load(file)
 	})
 
 
