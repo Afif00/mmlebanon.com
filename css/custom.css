@@ -1,1 +1,3 @@
-@import "custom-navbar.css";
+@import "custom/custom-colors.css";
+@import "custom/custom-classes.css";
+@import "custom/custom-navbar.css";

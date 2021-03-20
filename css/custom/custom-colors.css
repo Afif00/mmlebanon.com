@@ -1,0 +1,22 @@
+:root {
+    --mm_green: #214D25;
+    --mm_red: #D71F28;
+    --mm_black: #000000;
+    --mm_white: #FFFFFF;
+    --mm_green80: rgba(var(--mm_green), .8);
+    --mm_green60: rgba(var(--mm_green), .6);
+    --mm_green40: rgba(var(--mm_green), .4);
+    --mm_green20: rgba(var(--mm_green), .2);
+    --mm_red80: rgba(var(--mm_red), .8);
+    --mm_red60: rgba(var(--mm_red), .6);
+    --mm_red40: rgba(var(--mm_red), .4);
+    --mm_red20: rgba(var(--mm_red), .2);
+    --mm_black80: rgba(var(--mm_black), .8);
+    --mm_black60: rgba(var(--mm_black), .6);
+    --mm_black40: rgba(var(--mm_black), .4);
+    --mm_black20: rgba(var(--mm_black), .2);
+    --mm_white80: rgba(var(--mm_white), .8);
+    --mm_white60: rgba(var(--mm_white), .6);
+    --mm_white40: rgba(var(--mm_white), .4);
+    --mm_white20: rgba(var(--mm_white), .2);
+}

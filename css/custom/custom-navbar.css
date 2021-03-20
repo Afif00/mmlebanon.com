@@ -3,6 +3,10 @@
     text-transform: uppercase;
 }
 
+.ftco-navbar-light .navbar-nav > .nav-item.active > a {
+    color: var(--mm_red);
+}
+
 .ftco-navbar-light .navbar-brand img {
     height: auto;
     width: 5rem;
