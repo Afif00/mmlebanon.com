@@ -2,3 +2,8 @@
     font-weight: 500;
     text-transform: uppercase;
 }
+
+.ftco-navbar-light .navbar-brand img {
+    height: auto;
+    width: 5rem;
+}
