@@ -1,0 +1,39 @@
+.ftco-intro .block-18,
+.ftco-intro .block-18 > .text > h3,
+.ftco-intro .block-18 > .text > span,
+.ftco-intro .block-18 > .text > strong {
+    color: var(--mm_white);
+}
+
+.ftco-intro .block-18 > .text > h3,
+.ftco-intro .block-18 > .text > span:first-of-type {
+    text-transform: uppercase;
+}
+
+.ftco-intro .block-18 > .text > h3,
+.ftco-intro .block-18 > .text > p {
+    margin-bottom: 0 !important;
+}
+
+.ftco-intro .block-18 > .text {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ftco-intro .block-18.color-1 {
+    background: var(--mm_black);
+}
+
+.ftco-intro .block-18.color-2 {
+    background: var(--mm_black80);
+}
+
+.ftco-intro .block-18.color-3 {
+    background: var(--mm_black60);
+}
+
+.ftco-section .heading-section .button-container {
+    margin-top: 3rem;
+}

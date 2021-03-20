@@ -1,0 +1,13 @@
+.btn-red {
+    background: var(--mm_red);
+    border: 1px solid transparent;
+    color: var(--mm_white);
+    text-transform: uppercase;
+}
+
+.btn-black {
+    background: var(--mm_black);
+    border: 1px solid transparent;
+    color: var(--mm_white);
+    text-transform: uppercase;
+}

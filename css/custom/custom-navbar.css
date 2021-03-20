@@ -3,8 +3,14 @@
     text-transform: uppercase;
 }
 
-.ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: var(--mm_red);
+.ftco-navbar-light .navbar-nav > .nav-item.active > a,
+.ftco-navbar-light.scrolled .navbar-nav > .nav-item.active > a {
+    color: var(--mm_red) !important;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item:last-of-type > a,
+.ftco-navbar-light.scrolled .navbar-nav > .nav-item:last-of-type > a {
+    color: var(--mm_red) !important;
 }
 
 .ftco-navbar-light .navbar-brand img {

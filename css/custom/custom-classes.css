@@ -1,3 +1,24 @@
 .extrabold {
     font-weight: 700 !important;
 }
+
+.ftco-section {
+    padding: 7rem 0 2rem;
+}
+
+.ftco-section--red {
+    background-color: var(--mm_red);
+    padding: 3rem 0;
+}
+.ftco-section--red h2 {
+    color: var(--mm_white);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.link-classic {
+    color: var(--mm_red);
+    text-decoration: underline;
+}
