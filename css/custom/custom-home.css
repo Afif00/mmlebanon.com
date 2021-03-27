@@ -11,6 +11,11 @@
 }
 
 .ftco-intro .block-18 > .text > h3,
+.ftco-intro .block-18 > .text > span {
+    font-size: 1rem;
+}
+
+.ftco-intro .block-18 > .text > h3,
 .ftco-intro .block-18 > .text > p {
     margin-bottom: 0 !important;
 }
