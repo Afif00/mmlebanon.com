@@ -17,3 +17,13 @@
     height: auto;
     width: 5rem;
 }
+
+.ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
+    background-color: var(--mm_red);
+    border-radius: 0;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu > .dropdown-item {
+    color: var(--mm_white);
+    text-transform: uppercase;
+}

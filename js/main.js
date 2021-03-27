@@ -165,7 +165,6 @@ AOS.init({
 				$('.number').each(function(){
 					let $this = $(this),
 						num = $this.data('number');
-					console.log(num);
 					$this.animateNumber(
 						{
 							number: num,
