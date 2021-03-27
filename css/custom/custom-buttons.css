@@ -23,3 +23,11 @@
 .btn-black:hover {
     background: #6e6e6e;
 }
+
+.btn.btn-white.btn-outline-white:hover {
+    color: var(--mm_black);
+}
+
+.slider-text .btn-outline-white:hover span {
+    color: var(--mm_black);
+}
