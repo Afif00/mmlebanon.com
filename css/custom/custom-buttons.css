@@ -1,3 +1,7 @@
+.btn:hover {
+    color: var(--mm_white);
+}
+
 .btn-red {
     background: var(--mm_red);
     border: 1px solid transparent;
@@ -5,9 +9,17 @@
     text-transform: uppercase;
 }
 
+.btn-red:hover {
+    background: #a91821;
+}
+
 .btn-black {
     background: var(--mm_black);
     border: 1px solid transparent;
     color: var(--mm_white);
     text-transform: uppercase;
+}
+
+.btn-black:hover {
+    background: #6e6e6e;
 }
