@@ -27,3 +27,7 @@
     color: var(--mm_white);
     text-transform: uppercase;
 }
+
+.ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu > .dropdown-item:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
