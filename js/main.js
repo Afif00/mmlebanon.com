@@ -244,7 +244,7 @@ AOS.init({
 
 	// magnific popup
 	$('.image-popup').magnificPopup({
-		type: 'image',
+		type: 'video',
 		closeOnContentClick: true,
 		closeBtnInside: false,
 		fixedContentPos: true,
@@ -260,7 +260,10 @@ AOS.init({
 		zoom: {
 			enabled: true,
 			duration: 300 // don't foget to change the duration also in CSS
-		}
+		},
+		items: {
+		  src: 'https://player.vimeo.com/video/529974687'
+		},
 	});
 
 	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
@@ -270,7 +273,10 @@ AOS.init({
 		removalDelay: 160,
 		preloader: false,
 
-		fixedContentPos: false
+		fixedContentPos: false,
+		items: {
+		  src: 'https://player.vimeo.com/video/529974687'
+		},
 	});
 
 
