@@ -1,0 +1,13 @@
+#manifesto .hero-wrap {
+    background-image: url('../../images/MANIFESTO1/1.jpg');
+}
+
+#manifesto .ftco-section p > span.arabic-1 {
+    color: inherit;
+    font-size: 1.2rem;
+}
+
+#manifesto .ftco-section .heading-section.heading-section--bold {
+    font-weight: 700;
+    margin-top: 3rem;
+}

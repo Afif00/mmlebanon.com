@@ -4,12 +4,23 @@
 
 .ftco-section {
     padding: 7rem 0 2rem;
+    color: var(--mm_black);
+}
+
+.ftco-section .heading-section p {
+    color: var(--mm_black);
 }
 
 .ftco-section--red {
     background-color: var(--mm_red);
     padding: 3rem 0;
 }
+
+.ftco-section--black {
+    background-color: var(--mm_black);
+    padding: 3rem 0;
+}
+
 .ftco-section--red h2 {
     color: var(--mm_white);
     font-weight: 600;
