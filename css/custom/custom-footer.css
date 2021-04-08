@@ -1,0 +1,24 @@
+.ftco-footer-widget {
+    text-align: center;
+}
+
+.ftco-footer .ftco-footer-widget h2 {
+    font-weight: 600;
+}
+
+.ftco-footer-widget ul {
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.ftco-footer-widget a {
+    font-size: .825rem;
+}
+
+.ftco-footer-widget a.bold {
+    font-weight: 700;
+}
+
+.ftco-footer .ftco-footer-widget h2:after {
+    display: none;
+}

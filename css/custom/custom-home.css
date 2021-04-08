@@ -1,3 +1,7 @@
+#home #section-counter {
+    z-index: 2;
+}
+
 #home .ftco-intro .block-18,
 #home .ftco-intro .block-18 > .text > h3,
 #home .ftco-intro .block-18 > .text > span,
@@ -41,4 +45,69 @@
 
 #home .ftco-section .heading-section .button-container {
     margin-top: 3rem;
+}
+
+#home .hero-wrap {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+#home .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--primary-color) url('./https://traversymedia.com/downloads/cover.jpg') no-repeat center
+    center/cover;
+}
+
+#home .video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+#home .video-container:after {
+    content: '';
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+#home .content {
+    z-index: 2;
+}
+
+#home .ftco-section.form {
+    background: url('../../images/homepage_form_bg.jpeg') no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+#home .ftco-section.form:after {
+    background-color: var(--mm_red80);
+    bottom: 0;
+    content: '';
+    left: 0;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
