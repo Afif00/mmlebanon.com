@@ -6,6 +6,14 @@
     color: inherit;
 }
 
+#manifesto .ftco-section--black {
+     padding: 4rem 0;
+ }
+
+#manifesto .ftco-section--black .w-100 {
+    padding: 1.5rem 0;
+}
+
 #manifesto .ftco-section .heading-section.heading-section--bold {
     font-weight: 700;
     margin-top: 3rem;
