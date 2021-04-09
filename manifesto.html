@@ -73,19 +73,28 @@
             <div class="col-12 mt-3">
                 <form action="#">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Full Name">
+                        <input type="text" class="form-control" id="form_name" placeholder="Full Name">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email address">
+                        <input type="text" class="form-control" id="form_email" placeholder="Email address">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="City">
+                        <input type="text" class="form-control" id="form_why" placeholder="Why are you signing ?">
                     </div>
                     <div class="form-group">
-                        <input type="checkbox"> I have read and agree to the Privacy Policy
+                        <input type="checkbox" id="agreement"> I have read and agree to the Privacy Policy
                     </div>
                     <div class="form-group d-flex justify-content-center">
-                        <input type="submit" value="Send Message" class="btn btn-red py-2 px-3">
+                        <input type="button" id="submit"  value="Send Message" class="btn btn-red py-2 px-3">
+                    </div>
+                    <div class="alert alert-success d-none" role="alert">
+                        <strong>Success !</strong> Your message has been sent.
+                    </div>
+                    <div class="alert alert-warning d-none" role="alert">
+                        Make sure you've agreed to our Private Policy.
+                    </div>
+                    <div class="alert alert-danger d-none" role="alert">
+                        <strong>Error !</strong> Please try again later.
                     </div>
                 </form>
             </div>
@@ -120,5 +129,36 @@
 <script src="js/main.js"></script>
 
 </body>
+
+<script>
+    $("#submit").click(function() {
+        const alertSuccess = $('.alert-success');
+        const alertWarning = $('.alert-warning');
+        const alertDanger = $('.alert-danger');
+        alertSuccess.addClass('d-none');
+        alertWarning.addClass('d-none');
+        alertDanger.addClass('d-none');
+        let data = {
+            name: $("#form_name").val(),
+            email: $("#form_email").val(),
+            message: $("#form_why").val()
+        };
+        if ($('input#agreement').is(':checked')) {
+            $.ajax({
+                type: "POST",
+                url: "email.php",
+                data: data,
+                success: function () {
+                    alertWarning.removeClass('d-none');
+                },
+                error: function () {
+                    alertDanger.removeClass('d-none');
+                }
+            });
+        } else {
+            alertWarning.removeClass('d-none');
+        }
+    });
+</script>
 
 </html>

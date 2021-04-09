@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Neo Sans Arabic';
-    src: url('NeoSansArabic-Light.woff2') format('woff2'),
-    url('NeoSansArabic-Light.woff') format('woff');
+    src: url('../../fonts/arabic/NeoSansArabic-Light.woff2') format('woff2'),
+    url('../../fonts/arabic/NeoSansArabic-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'Neo Sans';
-    src: url('NeoSans-Medium.woff2') format('woff2'),
-    url('NeoSans-Medium.woff') format('woff');
+    src: url('../../fonts/arabic/NeoSans-Medium.woff2') format('woff2'),
+    url('../../fonts/arabic/NeoSans-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'Neo Sans Arabic';
-    src: url('NeoSansArabic-Black.woff2') format('woff2'),
-    url('NeoSansArabic-Black.woff') format('woff');
+    src: url('../../fonts/arabic/NeoSansArabic-Black.woff2') format('woff2'),
+    url('../../fonts/arabic/NeoSansArabic-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
     font-family: 'NeoSansArabic';
-    src: url('NeoSansArabic.woff2') format('woff2'),
-    url('NeoSansArabic.woff') format('woff');
+    src: url('../../fonts/arabic/NeoSansArabic.woff2') format('woff2'),
+    url('../../fonts/arabic/NeoSansArabic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -36,8 +36,8 @@
 
 @font-face {
     font-family: 'Neo Sans Arabic';
-    src: url('NeoSansArabic-Bold.woff2') format('woff2'),
-    url('NeoSansArabic-Bold.woff') format('woff');
+    src: url('../../fonts/arabic/NeoSansArabic-Bold.woff2') format('woff2'),
+    url('../../fonts/arabic/NeoSansArabic-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -45,8 +45,8 @@
 
 @font-face {
     font-family: 'Neo Sans Arabic';
-    src: url('NeoSansArabic-Medium.woff2') format('woff2'),
-    url('NeoSansArabic-Medium.woff') format('woff');
+    src: url('../../fonts/arabic/NeoSansArabic-Medium.woff2') format('woff2'),
+    url('../../fonts/arabic/NeoSansArabic-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -54,8 +54,8 @@
 
 @font-face {
     font-family: 'Neo Sans Arabic';
-    src: url('NeoSansArabic.woff2') format('woff2'),
-    url('NeoSansArabic.woff') format('woff');
+    src: url('../../fonts/arabic/NeoSansArabic.woff2') format('woff2'),
+    url('../../fonts/arabic/NeoSansArabic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -63,8 +63,8 @@
 
 @font-face {
     font-family: 'Neo Sans Arabic Ultra';
-    src: url('NeoSansArabic-Ultra.woff2') format('woff2'),
-    url('NeoSansArabic-Ultra.woff') format('woff');
+    src: url('../../fonts/arabic/NeoSansArabic-Ultra.woff2') format('woff2'),
+    url('../../fonts/arabic/NeoSansArabic-Ultra.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
