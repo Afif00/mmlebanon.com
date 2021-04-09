@@ -21,8 +21,10 @@
 .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
     background-color: var(--mm_red);
     border-radius: 0;
+    left: 50%;
     line-height: 3;
     text-align: center;
+    transform: translateX(-50%);
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu > .dropdown-item {
