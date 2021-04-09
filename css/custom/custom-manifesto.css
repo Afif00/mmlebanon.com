@@ -1,13 +1,28 @@
 #manifesto .hero-wrap {
-    background-image: url('../../images/MANIFESTO1/1.jpg');
+    background-image: url('../../images/manifesto/header.jpg');
 }
 
 #manifesto .ftco-section p > span.arabic-1 {
     color: inherit;
-    font-size: 1.2rem;
 }
 
 #manifesto .ftco-section .heading-section.heading-section--bold {
     font-weight: 700;
     margin-top: 3rem;
+}
+
+#manifesto .slider-text .bread .arabic-1 {
+    color: white;
+    display: block;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+#manifesto .heading-section .text-uppercase {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+#manifesto .heading-section .arabic-2 {
+    font-size: 3rem;
 }

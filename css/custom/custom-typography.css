@@ -1,3 +1,77 @@
+@font-face {
+    font-family: 'Neo Sans Arabic';
+    src: url('NeoSansArabic-Light.woff2') format('woff2'),
+    url('NeoSansArabic-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo Sans';
+    src: url('NeoSans-Medium.woff2') format('woff2'),
+    url('NeoSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo Sans Arabic';
+    src: url('NeoSansArabic-Black.woff2') format('woff2'),
+    url('NeoSansArabic-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NeoSansArabic';
+    src: url('NeoSansArabic.woff2') format('woff2'),
+    url('NeoSansArabic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo Sans Arabic';
+    src: url('NeoSansArabic-Bold.woff2') format('woff2'),
+    url('NeoSansArabic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo Sans Arabic';
+    src: url('NeoSansArabic-Medium.woff2') format('woff2'),
+    url('NeoSansArabic-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo Sans Arabic';
+    src: url('NeoSansArabic.woff2') format('woff2'),
+    url('NeoSansArabic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo Sans Arabic Ultra';
+    src: url('NeoSansArabic-Ultra.woff2') format('woff2'),
+    url('NeoSansArabic-Ultra.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 h1,
 .h1 {
     font-size: 3.052rem;
@@ -26,4 +100,10 @@ h5,
 .arabic-1 {
     color: #000000;
     font-family: "Neo Sans Arabic", Verdana, sans-serif;
+}
+
+.arabic-2 {
+    color: #000000;
+    font-family: "Neo Sans Arabic", Verdana, sans-serif;
+    font-weight: bold;
 }
