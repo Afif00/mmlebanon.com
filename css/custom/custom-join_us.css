@@ -1,0 +1,14 @@
+#join-us .hero-wrap {
+    background-image: url('../../images/join-us/header.png');
+}
+
+#join-us .slider-text .bread .arabic-2 {
+    color: white;
+    display: block;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+#join-us ul {
+    padding: 0;
+}
