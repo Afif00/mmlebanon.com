@@ -38,6 +38,7 @@
                 </div>
 
             </div>
+
             <div class="row block-9">
                 <div class="col-md-12 ">
                     <h4 class="mb-4">CONTACT FORM</h4>
@@ -45,26 +46,35 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Full Name">
+                                    <input type="text" class="form-control" id="form_name" placeholder="Full Name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Email">
+                                    <input type="text" class="form-control" id="form_email" placeholder="Your Email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="City">
+                                    <select name="chapters" id="form_city" class="form-control"></select>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group ">
-                                    <textarea name="" id="" cols="10" rows="7" class="form-control" placeholder="Message"></textarea>
+                                    <textarea name="" id="form_message" cols="10" rows="7" class="form-control" placeholder="Message"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="checkbox"> I have read and agree to the Privacy Policy
+                            <input type="checkbox" id="agreement"> I have read and agree to the Privacy Policy
                         </div>
                         <div class="form-group d-flex justify-content-center">
-                            <input type="submit" value="Send Message" class="btn btn-red py-2 px-3">
+                            <input type="button" id="submit"  value="Send Message" class="btn btn-red py-2 px-3">
+                        </div>
+                        <div class="alert alert-success d-none" role="alert">
+                            <strong>Success !</strong> Your message has been sent.
+                        </div>
+                        <div class="alert alert-warning d-none" role="alert">
+                            Make sure you've agreed to our Private Policy.
+                        </div>
+                        <div class="alert alert-danger d-none" role="alert">
+                            <strong>Error !</strong> Please try again later.
                         </div>
                     </form>
                 </div>
@@ -95,6 +105,92 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        let chapters = [
+            { name: "us-dc", value: "USA - Washington DC" },
+            { name: "us-la", value: "USA - Los Angeles" },
+            { name: "us-sf", value: "USA - San Francisco" },
+            { name: "us-ph", value: "USA - Philadelphia" },
+            { name: "us-ho", value: "USA - Houston" },
+            { name: "us-oh", value: "USA - Ohio" },
+            { name: "us-bo", value: "USA - Boston" },
+            { name: "us-se", value: "USA - Seattle" },
+            { name: "ca-mo", value: "Canada - Montreal" },
+            { name: "ca-to", value: "Canada - Toronto" },
+            { name: "ca-ot", value: "Canada - Ottowa" },
+            { name: "ca-va", value: "Canada - Vancouver" },
+            { name: "uk-lo", value: "United Kingdom - London" },
+            { name: "ir-du", value: "Ireland - Dublin" },
+            { name: "fr-pa", value: "France - Paris" },
+            { name: "fr-ly", value: "France - Lyon" },
+            { name: "fr-li", value: "France - Lille" },
+            { name: "fr-na", value: "France - Nantes" },
+            { name: "fr-ma", value: "France - Marseille" },
+            { name: "fr-be", value: "France - Besanccon" },
+            { name: "fr-re", value: "France - Rennes" },
+            { name: "bg-le", value: "Belgium - Leuven" },
+            { name: "bg-br", value: "Belgium - Brussels" },
+            { name: "ge-fr", value: "Germany - Frankfurt" },
+            { name: "ge-ei", value: "Germany - Eilenburg" },
+            { name: "sp-ba", value: "Spain - Barcelona" },
+            { name: "sp-ma", value: "Spain - Madrid" },
+            { name: "sw-ge", value: "Switzerland - Geneva" },
+            { name: "sw-zu", value: "Switzerland - Zurich" },
+            { name: "it-mi", value: "Italy - Milan" },
+            { name: "it-to", value: "Italy - Torino" },
+            { name: "ne-am", value: "Netherlands - Amsterdam" },
+            { name: "cz-pr", value: "Czechia - Prague" },
+            { name: "hu-bu", value: "Hungary - Budapest" },
+            { name: "no-os", value: "Norway - Oslo" },
+            { name: "sw-st", value: "Sweden - Stockholm" },
+            { name: "tu-is", value: "Turkey - Istanbul" },
+            { name: "au-sy", value: "Australia - Sydney" },
+            { name: "au-me", value: "Australia - Melbourne" },
+            { name: "sa-ri", value: "Saudi-Arabia - Riyadh" },
+            { name: "ua-du", value: "UAE - Dubai" },
+            { name: "ku-ku", value: "Kuwait - Kuwait City" },
+            { name: "qa-do", value: "Qatar - Doha" },
+            { name: "br-sp", value: "Brazil - Sao-Paulo" },
+            { name: "sk-se", value: "South Korea - Seoul" }
+        ];
+        $.each(chapters, function(index, item){
+            $("select[name=chapters]").append($("<option>",{
+                value: item.name,
+                text: item.value
+            }));
+        });
+
+        $("#submit").click(function() {
+            const alertSuccess = $('.alert-success');
+            const alertWarning = $('.alert-warning');
+            const alertDanger = $('.alert-danger');
+            alertSuccess.addClass('d-none');
+            alertWarning.addClass('d-none');
+            alertDanger.addClass('d-none');
+            let data = {
+                name: $("#form_name").val(),
+                email: $("#form_email").val(),
+                message: $("#form_message").val(),
+                city: $("#form_city").val()
+            };
+            if ($('input#agreement').is(':checked')) {
+                $.ajax({
+                    type: "POST",
+                    url: "email.php",
+                    data: data,
+                    success: function () {
+                        alertWarning.removeClass('d-none');
+                    },
+                    error: function () {
+                        alertDanger.removeClass('d-none');
+                    }
+                });
+            } else {
+                alertWarning.removeClass('d-none');
+            }
+        });
+    </script>
 
 </body>
 
