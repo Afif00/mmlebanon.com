@@ -107,3 +107,13 @@ h5,
     font-family: "Neo Sans Arabic", Verdana, sans-serif;
     font-weight: bold;
 }
+
+.slider-text .bread {
+    font-size: 3rem;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+}
+
+.slider-text .bread span {
+    color: white;
+}
