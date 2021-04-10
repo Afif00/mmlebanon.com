@@ -124,7 +124,7 @@
             if ($('input#agreement').is(':checked')) {
                 $.ajax({
                     type: "POST",
-                    url: "email.php",
+                    url: "/scripts/contactus.php",
                     data: data,
                     success: function () {
                         alertWarning.removeClass('d-none');
