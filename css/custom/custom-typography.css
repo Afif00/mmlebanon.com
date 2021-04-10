@@ -70,7 +70,14 @@
     font-display: swap;
 }
 
+body {
+    font-family: "Montserrat", Verdana, sans-serif;
+}
 
+a,
+a:hover {
+    color: var(--mm_red);
+}
 
 h1,
 .h1 {
@@ -111,9 +118,15 @@ h5,
 .slider-text .bread {
     font-size: 3rem;
     font-weight: 600 !important;
+    margin-bottom: 0 !important;
+    margin-top: 5rem;
     text-transform: uppercase;
 }
 
 .slider-text .bread span {
     color: white;
+}
+
+.contact-section .contact-info p a {
+    color: var(--mm_red);
 }

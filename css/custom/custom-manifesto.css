@@ -16,13 +16,16 @@
 
 #manifesto .ftco-section .heading-section.heading-section--bold {
     font-weight: 700;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
+}
+
+#manifesto .slider-text .bread {
+    font-size: 4rem;
 }
 
 #manifesto .slider-text .bread .arabic-1 {
     color: white;
     display: block;
-    font-size: 4rem;
     margin-bottom: 1rem;
 }
 

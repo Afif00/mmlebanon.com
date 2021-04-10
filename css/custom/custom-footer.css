@@ -1,24 +1,28 @@
-.ftco-footer-widget {
+#footer.ftco-footer {
+    background-color: var(--mm_black);
+    padding: 5rem 0;
+}
+
+#footer .ftco-footer-widget {
     text-align: center;
 }
 
-.ftco-footer .ftco-footer-widget h2 {
+#footer.ftco-footer .ftco-footer-widget h2 {
     font-weight: 600;
 }
-
-.ftco-footer-widget ul {
+#footer .ftco-footer-widget ul {
     padding: 0;
     text-transform: uppercase;
 }
 
-.ftco-footer-widget a {
+#footer .ftco-footer-widget a {
     font-size: .825rem;
 }
 
-.ftco-footer-widget a.bold {
+#footer .ftco-footer-widget a.bold {
     font-weight: 700;
 }
 
-.ftco-footer .ftco-footer-widget h2:after {
+#footer.ftco-footer .ftco-footer-widget h2:after {
     display: none;
 }

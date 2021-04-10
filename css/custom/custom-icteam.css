@@ -1,0 +1,29 @@
+#icteam .ftco-section {
+    padding: 4rem 0 0;
+}
+
+#icteam .blog-entry {
+    border-radius: 0;
+}
+
+#icteam .card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    width: 100%;
+}
+
+#icteam .card .card-body {
+    background-color: white;
+    justify-content: flex-start;
+}
+
+#icteam .card .card-img-top {
+    background-color: var(--mm_red);
+    height: 20vw;
+    min-height: 20vw;
+}
+
+#icteam .card .card-img-top img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}

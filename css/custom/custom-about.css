@@ -1,3 +1,10 @@
 #about h3 {
     text-transform: uppercase;
 }
+
+#about .black20-bg {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}

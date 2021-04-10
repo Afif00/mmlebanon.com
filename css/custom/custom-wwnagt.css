@@ -1,0 +1,7 @@
+#wwnagt .ftco-section {
+    padding: 4rem 0;
+}
+
+#wwnagt .img-fluid:last-of-type {
+    margin-top: -1rem;
+}

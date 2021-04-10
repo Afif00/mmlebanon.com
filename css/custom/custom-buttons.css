@@ -6,6 +6,7 @@
     background: var(--mm_red);
     border: 1px solid transparent;
     color: var(--mm_white);
+    font-weight: 600;
     text-transform: uppercase;
 }
 

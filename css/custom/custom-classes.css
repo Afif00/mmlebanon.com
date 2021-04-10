@@ -3,7 +3,7 @@
 }
 
 .ftco-section {
-    padding: 7rem 0 2rem;
+    padding: 5rem 0 2rem;
     color: var(--mm_black);
 }
 
@@ -32,4 +32,16 @@
 .link-classic {
     color: var(--mm_red);
     text-decoration: underline;
+}
+
+.black20-bg {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.hero-wrap {
+    background-position: center !important;
+}
+
+.hero-wrap .overlay {
+    opacity: .2;
 }
