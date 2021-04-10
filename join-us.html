@@ -158,7 +158,8 @@
         { name: "ku-ku", value: "Kuwait - Kuwait City" },
         { name: "qa-do", value: "Qatar - Doha" },
         { name: "br-sp", value: "Brazil - Sao-Paulo" },
-        { name: "sk-se", value: "South Korea - Seoul" }
+        { name: "sk-se", value: "South Korea - Seoul" },
+        { name: "other", value: "Other" },
     ];
     $.each(chapters, function(index, item){
         $("select[name=chapters]").append($("<option>",{
@@ -171,26 +172,67 @@
         const alertSuccess = $('.alert-success');
         const alertWarning = $('.alert-warning');
         const alertDanger = $('.alert-danger');
-        alertSuccess.addClass('d-none');
-        alertWarning.addClass('d-none');
-        alertDanger.addClass('d-none');
-        let data = {
-            type: 'join',
-            name: $("#form_name").val(),
-            email: $("#form_email").val(),
-            message: $("#form_message").val(),
-            city: $("#form_city").val()
-        };
-        if ($('input#agreement').is(':checked')) {
+
+        const formName = $("#form_name");
+        const formEmail = $("#form_email");
+        const formMessage = $("#form_why");
+
+        const formNameEmpty = $("#form_name").val() === "";
+        const formEmailEmpty = $("#form_email").val() === "";
+        const formMessageEmpty = $("#form_why").val() === "";
+
+        function resetForm() {
+            alertSuccess.addClass('d-none');
+            alertWarning.addClass('d-none');
+            alertDanger.addClass('d-none');
+            formName.removeClass('is-invalid');
+            formName.removeClass('is-invalid');
+            formEmail.removeClass('is-invalid');
+            formMessage.removeClass('is-invalid');
+            formName.attr('placeholder', 'Full name');
+            formEmail.attr('placeholder', 'Email address');
+            formMessage.attr('placeholder', 'Why are you signing ?');
+        }
+
+        resetForm();
+
+        if (formNameEmpty) {
+            formName.addClass('is-invalid');
+            formName.attr('placeholder', 'Please specify a name');
+        }
+        if (formEmailEmpty) {
+            formEmail.addClass('is-invalid');
+            formEmail.attr('placeholder', 'Please specify an email');
+        }
+        if (formMessageEmpty) {
+            formMessage.addClass('is-invalid');
+            formMessage.attr('placeholder', 'Please leave a message');
+        }
+
+        if ($('input#agreement').is(':checked') && !formNameEmpty && !formEmailEmpty && !formMessageEmpty) {
+
+            let data = {
+                type: 'join',
+                name: $("#form_name").val(),
+                email: $("#form_email").val(),
+                message: $("#form_message").val(),
+                city: $("#form_city").val()
+            };
+
             $.ajax({
                 type: "POST",
                 url: "/scripts/contactus.php",
                 data: data,
                 success: function () {
-                    alertWarning.removeClass('d-none');
+                    alertSuccess.removeClass('d-none');
+                    alertWarning.addClass('d-none');
+                    alertDanger.addClass('d-none');
                 },
                 error: function () {
                     alertDanger.removeClass('d-none');
+                },
+                complete: function () {
+                    resetForm();
                 }
             });
         } else {
