@@ -12,3 +12,7 @@
 #join-us ul {
     padding: 0;
 }
+
+#join-us .heading-section h3 {
+    font-weight: 600;
+}
