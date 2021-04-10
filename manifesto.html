@@ -187,13 +187,11 @@
                     alertSuccess.removeClass('d-none');
                     alertWarning.addClass('d-none');
                     alertDanger.addClass('d-none');
+                    resetForm();
                 },
                 error: function () {
                     alertDanger.removeClass('d-none');
                 },
-                complete: function () {
-                    resetForm();
-                }
             });
         } else {
             alertWarning.removeClass('d-none');
