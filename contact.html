@@ -107,7 +107,6 @@
     <script src="js/main.js"></script>
 
     <script>
-
         $("#submit").click(function() {
             const alertSuccess = $('.alert-success');
             const alertWarning = $('.alert-warning');
@@ -116,28 +115,29 @@
             const formName = $("#form_name");
             const formEmail = $("#form_email");
             const formSubject = $("#form_subject");
-            const formMessage = $("#form_why");
+            const formMessage = $("#form_message");
 
-            const formNameEmpty = $("#form_name").val() === "";
-            const formEmailEmpty = $("#form_email").val() === "";
-            const formSubjectEmpty = $("#form_subject").val() === "";
-            const formMessageEmpty = $("#form_why").val() === "";
+            const formNameEmpty = formName.val() === "";
+            const formEmailEmpty = formEmail.val() === "";
+            const formSubjectEmpty = formSubject.val() === "";
+            const formMessageEmpty = formMessage.val() === "";
+
+            const policy = $('input#agreement');
 
             function resetForm() {
-                alertSuccess.addClass('d-none');
-                alertWarning.addClass('d-none');
-                alertDanger.addClass('d-none');
+                formName.removeClass('is-invalid');
                 formName.removeClass('is-invalid');
                 formEmail.removeClass('is-invalid');
-                formSubject.removeClass('is-invalid');
                 formMessage.removeClass('is-invalid');
                 formName.attr('placeholder', 'Full name');
                 formEmail.attr('placeholder', 'Email address');
-                formSubject.attr('placeholder', 'Subject');
                 formMessage.attr('placeholder', 'Why are you signing ?');
+                formName.val('');
+                formEmail.val('');
+                formMessage.val('');
+                formSubject.attr('placeholder', 'Subject');
+                policy.prop( "checked", false );
             }
-
-            resetForm();
 
             if (formNameEmpty) {
                 formName.addClass('is-invalid');
@@ -149,17 +149,17 @@
             }
             if (formSubjectEmpty) {
                 formSubject.addClass('is-invalid');
-                formSubject.attr('placeholder', 'Please specify a subject');
+                formSubject.attr('placeholder', 'Please leave a message');
             }
             if (formMessageEmpty) {
                 formMessage.addClass('is-invalid');
                 formMessage.attr('placeholder', 'Please leave a message');
             }
 
-            if ($('input#agreement').is(':checked') && !formNameEmpty && !formEmailEmpty && !formSubjectEmpty && !formMessageEmpty) {
+            if (policy[0].checked && !formNameEmpty && !formSubjectEmpty && !formEmailEmpty && !formMessageEmpty) {
 
                 let data = {
-                    type: 'manifesto',
+                    type: 'join',
                     name: formName.val(),
                     email: formEmail.val(),
                     subject: formSubject.val(),
@@ -177,8 +177,11 @@
                         resetForm();
                     },
                     error: function () {
+                        alertSuccess.addClass('d-none');
+                        alertWarning.addClass('d-none');
                         alertDanger.removeClass('d-none');
-                    }
+                        resetForm();
+                    },
                 });
             } else {
                 alertWarning.removeClass('d-none');
