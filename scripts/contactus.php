@@ -99,7 +99,7 @@ if (isset($_REQUEST['type']) && !empty($_REQUEST['type'])) {
             $messageBody .= "<p><strong>email:</strong> {$_REQUEST['email']}</p>";
             if (isset($_REQUEST['message']))
                 $messageBody .= "<p><strong>Why are you signing:</strong> {$_REQUEST['message']}</p>";
-            $sent = sendMail("ali.nakouzi@outlook.com", "", "", $messageBody);
+            $sent = sendMail("rita.rouhban@gmail.com", "", "", $messageBody);
             //  $sent = sendMail($tech_team, "", "", $messageBody);
             if ($sent)
                 echo "sent successfully";
