@@ -7,12 +7,18 @@
             <span class="oi oi-menu"></span> Menu
         </button>
 
-        <div w3-include-html="includes/menu.html"></div>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link" href="about.html" id="navbarDropdown">About</a>
+                    <a class="nav-link d-none d-lg-block text-white" href="about.html" id="navbarDropdown">About</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="about.html">About Us</a>
+                        <a class="dropdown-item" href="global-thawra.html">Why We Need A Global Thawra</a>
+                        <a class="dropdown-item" href="team.html">International Coordination Team</a>
+                        <a class="dropdown-item" href="contact.html">Contact Us</a>
+                    </div>
+                    <a class="nav-link d-block d-lg-none" onclick="toggleDropdown()" id="navbarDropdown2">About</a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="about.html">About Us</a>
                         <a class="dropdown-item" href="global-thawra.html">Why We Need A Global Thawra</a>
@@ -30,32 +36,40 @@
 </nav>
 
 <script>
-    let parts = location.pathname.split('/');
-    let lastSegment = parts.pop() || parts.pop();
-    let menuItems = document.querySelectorAll('.nav-item');
-    if (lastSegment === "") {
-        menuItems[0].className += ' active';
-    } else {
-        for (let i = 0, len = menuItems.length; i < len; i++) {
-            if (menuItems[i].children[0].getAttribute("href").indexOf(lastSegment) !== -1) {
-                menuItems[i].className += ' active';
+    $(document).ready(function() {
+        let parts = location.pathname.split('/');
+        let lastSegment = parts.pop() || parts.pop();
+        let menuItems = document.querySelectorAll('.nav-item');
+        if (lastSegment === "") {
+            menuItems[0].className += ' active';
+        } else {
+            for (let i = 0, len = menuItems.length; i < len; i++) {
+                if (menuItems[i].children[0].getAttribute("href").indexOf(lastSegment) !== -1) {
+                    menuItems[i].className += ' active';
+                }
             }
         }
+
+        $("#navbarDropdown").hover(
+            function () {
+                $(this).next().addClass('show');
+                $(this).next().hover(
+                    function () {
+                        $(this).addClass('show');
+                    },
+                    function () {
+                        $(this).removeClass('show');
+                    },
+                )},
+            function () {
+                $(this).next().removeClass('show');
+            }
+        );
+    });
+
+    function toggleDropdown() {
+        console.log('here');
+        $("#navbarDropdown2").next().addClass('show');
     }
 
-    $("#navbarDropdown").hover(
-        function () {
-            $(this).next().addClass('show');
-            $(this).next().hover(
-                function () {
-                    $(this).addClass('show');
-                },
-                function () {
-                    $(this).removeClass('show');
-                },
-        )},
-        function () {
-            $(this).next().removeClass('show');
-        }
-    );
 </script>

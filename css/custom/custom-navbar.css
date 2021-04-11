@@ -31,10 +31,10 @@
     .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
         background-color: var(--mm_red);
         border-radius: 0;
+        font-size: 90%;
         left: 0;
         line-height: 3;
-        margin-left: -.86rem;
-        text-align: center;
+        text-align: left;
         transform: translateX(0);
     }
 }
