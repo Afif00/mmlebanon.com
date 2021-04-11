@@ -1,3 +1,7 @@
+.btn {
+    font-weight: 600;
+}
+
 .btn:hover {
     color: var(--mm_white);
 }
@@ -6,7 +10,6 @@
     background: var(--mm_red);
     border: 1px solid transparent;
     color: var(--mm_white);
-    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -19,6 +22,12 @@
     border: 1px solid transparent;
     color: var(--mm_white);
     text-transform: uppercase;
+}
+
+@media (max-width: 991.98px) {
+    .btn {
+        font-size: .825rem;
+    }
 }
 
 .btn-black:hover {

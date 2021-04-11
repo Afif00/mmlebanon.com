@@ -27,6 +27,18 @@
     transform: translateX(-50%);
 }
 
+@media (max-width: 991.98px) {
+    .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
+        background-color: var(--mm_red);
+        border-radius: 0;
+        left: 0;
+        line-height: 3;
+        margin-left: -.86rem;
+        text-align: center;
+        transform: translateX(0);
+    }
+}
+
 .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu > .dropdown-item {
     color: var(--mm_white);
     text-transform: uppercase;
@@ -34,4 +46,14 @@
 
 .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu > .dropdown-item:hover {
     background-color: rgba(0, 0, 0, .3);
+}
+
+.oi.oi-menu {
+    color: var(--mm_red);
+}
+
+.ftco-navbar-light .navbar-toggler {
+    flex-grow: 1;
+    padding-right: 1rem;
+    text-align: right;
 }
