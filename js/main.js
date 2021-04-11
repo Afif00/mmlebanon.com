@@ -7,6 +7,14 @@ AOS.init({
 
 	"use strict";
 
+	$(document).ready(function() {
+		setTimeout(function(){
+			$("#loading-wrapper").fadeOut("slow");
+			$("loading").delay(500).fadeOut("slow");
+		}, 1000);
+
+	});
+
 	$(window).stellar({
 		responsive: false,
 		parallaxBackgrounds: true,
@@ -267,12 +275,6 @@ AOS.init({
 	$.each(includes, function () {
 		let file = 'includes/' + $(this).data('include') + '.html'
 		$(this).load(file)
-	})
-
-	$(window).on('load', function() { // makes sure the whole site is loaded
-		$('#loading-image').hide(); // will first fade out the loading animation
-		$('#loading').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-		$('body').delay(350).css({'overflow':'visible'});
 	})
 
 })(jQuery);
