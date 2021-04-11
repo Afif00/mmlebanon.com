@@ -3,192 +3,213 @@
 
 <head data-include="head">
     <title>Contact Us</title>
+    <style>
+        #loading {
+            background-color: #fff;
+            height: 100%;
+            left: 0;
+            opacity: 1;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 99;
+        }
+
+        #loading-image {
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 100;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div data-include="menu"></div>
-    <!-- END nav -->
+<div id="loading">
+    <img id="loading-image" src="images/logo_MM-text.png" alt="Loading..." />
+</div>
+<div data-include="menu"></div>
+<!-- END nav -->
 
-    <div class="hero-wrap" style="background-image: url('images/about/contactus-bg.jpg');" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-                <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                    <h1 class="bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">CONTACT US</h1>
-                </div>
+<div class="hero-wrap" style="background-image: url('images/about/contactus-bg.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                <h1 class="bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">CONTACT US</h1>
             </div>
         </div>
     </div>
+</div>
 
 
-    <section class="ftco-section contact-section ftco-degree-bg">
-        <div class="container">
-            <div class="row d-flex contact-info">
-                <div class="col-md-12 mb-4">
-                    <h2 class="h4">CONTACT US</h2>
-                    <p>For all email inquiries, please contact us through the form <a href="#contactForm">below</a>.</p>
-                    <div class="w-100"></div>
-                    <h2 class="h4">PRESS INQUIRIES</h2>
-                    <p>For all global press or media inquiries, please contact:</p>
-                    <p><a href="mailto:committee.communications@meghterbin-mejtemiin.com">committee.communications@meghterbin-mejtemiin.com</a></p>
-                    <div class="w-100"></div>
-                    <h2 class="h4">RESEARCH</h2>
-                    <p>For all student research or interview requests please send please contact us through the form below and your enquiry will be directed to the relevant person in our network.</p>
-                </div>
-
+<section class="ftco-section contact-section ftco-degree-bg">
+    <div class="container">
+        <div class="row d-flex contact-info">
+            <div class="col-md-12 mb-4">
+                <h2 class="h4">CONTACT US</h2>
+                <p>For all email inquiries, please contact us through the form <a href="#contactForm">below</a>.</p>
+                <div class="w-100"></div>
+                <h2 class="h4">PRESS INQUIRIES</h2>
+                <p>For all global press or media inquiries, please contact:</p>
+                <p><a href="mailto:committee.communications@meghterbin-mejtemiin.com">committee.communications@meghterbin-mejtemiin.com</a></p>
+                <div class="w-100"></div>
+                <h2 class="h4">RESEARCH</h2>
+                <p>For all student research or interview requests please send please contact us through the form below and your enquiry will be directed to the relevant person in our network.</p>
             </div>
 
-            <div class="row block-9">
-                <div class="col-md-12 ">
-                    <h4 class="mb-4"><a name="contactForm">CONTACT FORM</a></h4>
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="form_name" placeholder="Full Name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="form_email" placeholder="Your Email">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="form_subject" placeholder="Subject">
-                                </div>
+        </div>
+
+        <div class="row block-9">
+            <div class="col-md-12 ">
+                <h4 class="mb-4"><a name="contactForm">CONTACT FORM</a></h4>
+                <form action="#">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="form_name" placeholder="Full Name">
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group ">
-                                    <textarea name="" id="form_message" cols="10" rows="7" class="form-control" placeholder="Message"></textarea>
-                                </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="form_email" placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="form_subject" placeholder="Subject">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <input type="checkbox" id="agreement"> I have read and agree to the  <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+                        <div class="col-md-6">
+                            <div class="form-group ">
+                                <textarea name="" id="form_message" cols="10" rows="7" class="form-control" placeholder="Message"></textarea>
+                            </div>
                         </div>
-                        <div class="form-group d-flex justify-content-center">
-                            <input type="button" id="submit"  value="Submit" class="btn btn-red py-2 px-3">
-                        </div>
-                        <div class="alert alert-success d-none" role="alert">
-                            <strong>Thank you for reaching out!</strong> A team member will get back to you shortly.
-                        </div>
-                        <div class="alert alert-warning d-none" role="alert">
-                            Make sure you've filled out the form correctly & agreed to our <a target="_blank" href="privacy-policy.html">Privacy Policy</a>.
-                        </div>
-                        <div class="alert alert-danger d-none" role="alert">
-                            <strong>Error !</strong> Please try again later.
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="agreement"> I have read and agree to the  <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+                    </div>
+                    <div class="form-group d-flex justify-content-center">
+                        <input type="button" id="submit"  value="Submit" class="btn btn-red py-2 px-3">
+                    </div>
+                    <div class="alert alert-success d-none" role="alert">
+                        <strong>Thank you for reaching out!</strong> A team member will get back to you shortly.
+                    </div>
+                    <div class="alert alert-warning d-none" role="alert">
+                        Make sure you've filled out the form correctly & agreed to our <a target="_blank" href="privacy-policy.html">Privacy Policy</a>.
+                    </div>
+                    <div class="alert alert-danger d-none" role="alert">
+                        <strong>Error !</strong> Please try again later.
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <div data-include="footer"></div>
+<div data-include="footer"></div>
 
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
 
+<script>
+    $("#submit").click(function() {
+        const alertSuccess = $('.alert-success');
+        const alertWarning = $('.alert-warning');
+        const alertDanger = $('.alert-danger');
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
+        const formName = $("#form_name");
+        const formEmail = $("#form_email");
+        const formSubject = $("#form_subject");
+        const formMessage = $("#form_message");
 
-    <script>
-        $("#submit").click(function() {
-            const alertSuccess = $('.alert-success');
-            const alertWarning = $('.alert-warning');
-            const alertDanger = $('.alert-danger');
+        const formNameEmpty = formName.val() === "";
+        const formEmailEmpty = formEmail.val() === "";
+        const formSubjectEmpty = formSubject.val() === "";
+        const formMessageEmpty = formMessage.val() === "";
 
-            const formName = $("#form_name");
-            const formEmail = $("#form_email");
-            const formSubject = $("#form_subject");
-            const formMessage = $("#form_message");
+        const policy = $('input#agreement');
 
-            const formNameEmpty = formName.val() === "";
-            const formEmailEmpty = formEmail.val() === "";
-            const formSubjectEmpty = formSubject.val() === "";
-            const formMessageEmpty = formMessage.val() === "";
+        function resetForm() {
+            formName.removeClass('is-invalid');
+            formName.removeClass('is-invalid');
+            formEmail.removeClass('is-invalid');
+            formMessage.removeClass('is-invalid');
+            formName.attr('placeholder', 'Full name');
+            formEmail.attr('placeholder', 'Email address');
+            formMessage.attr('placeholder', 'Message ?');
+            formSubject.attr('placeholder', 'Subject');
+            formName.val('');
+            formEmail.val('');
+            formMessage.val('');
+            formSubject.val('');
+            policy.prop( "checked", false );
+        }
 
-            const policy = $('input#agreement');
+        if (formNameEmpty) {
+            formName.addClass('is-invalid');
+            formName.attr('placeholder', 'Please specify a name');
+        }
+        if (formEmailEmpty) {
+            formEmail.addClass('is-invalid');
+            formEmail.attr('placeholder', 'Please specify an email');
+        }
+        if (formSubjectEmpty) {
+            formSubject.addClass('is-invalid');
+            formSubject.attr('placeholder', 'Please specify a subject');
+        }
+        if (formMessageEmpty) {
+            formMessage.addClass('is-invalid');
+            formMessage.attr('placeholder', 'Please leave a message');
+        }
 
-            function resetForm() {
-                formName.removeClass('is-invalid');
-                formName.removeClass('is-invalid');
-                formEmail.removeClass('is-invalid');
-                formMessage.removeClass('is-invalid');
-                formName.attr('placeholder', 'Full name');
-                formEmail.attr('placeholder', 'Email address');
-                formMessage.attr('placeholder', 'Message ?');
-                formSubject.attr('placeholder', 'Subject');
-                formName.val('');
-                formEmail.val('');
-                formMessage.val('');
-                formSubject.val('');
-                policy.prop( "checked", false );
-            }
+        if (policy[0].checked && !formNameEmpty && !formSubjectEmpty && !formEmailEmpty && !formMessageEmpty) {
 
-            if (formNameEmpty) {
-                formName.addClass('is-invalid');
-                formName.attr('placeholder', 'Please specify a name');
-            }
-            if (formEmailEmpty) {
-                formEmail.addClass('is-invalid');
-                formEmail.attr('placeholder', 'Please specify an email');
-            }
-            if (formSubjectEmpty) {
-                formSubject.addClass('is-invalid');
-                formSubject.attr('placeholder', 'Please specify a subject');
-            }
-            if (formMessageEmpty) {
-                formMessage.addClass('is-invalid');
-                formMessage.attr('placeholder', 'Please leave a message');
-            }
+            let data = {
+                type: 'contact',
+                name: formName.val(),
+                email: formEmail.val(),
+                subject: formSubject.val(),
+                message: formMessage.val()
+            };
 
-            if (policy[0].checked && !formNameEmpty && !formSubjectEmpty && !formEmailEmpty && !formMessageEmpty) {
-
-                let data = {
-                    type: 'contact',
-                    name: formName.val(),
-                    email: formEmail.val(),
-                    subject: formSubject.val(),
-                    message: formMessage.val()
-                };
-
-                $.ajax({
-                    type: "POST",
-                    url: "/scripts/contactus.php",
-                    data: data,
-                    success: function () {
-                        alertSuccess.removeClass('d-none');
-                        alertWarning.addClass('d-none');
-                        alertDanger.addClass('d-none');
-                        resetForm();
-                    },
-                    error: function () {
-                        alertSuccess.addClass('d-none');
-                        alertWarning.addClass('d-none');
-                        alertDanger.removeClass('d-none');
-                        resetForm();
-                    },
-                });
-            } else {
-                alertWarning.removeClass('d-none');
-            }
-        });
-    </script>
+            $.ajax({
+                type: "POST",
+                url: "/scripts/contactus.php",
+                data: data,
+                success: function () {
+                    alertSuccess.removeClass('d-none');
+                    alertWarning.addClass('d-none');
+                    alertDanger.addClass('d-none');
+                    resetForm();
+                },
+                error: function () {
+                    alertSuccess.addClass('d-none');
+                    alertWarning.addClass('d-none');
+                    alertDanger.removeClass('d-none');
+                    resetForm();
+                },
+            });
+        } else {
+            alertWarning.removeClass('d-none');
+        }
+    });
+</script>
 
 </body>
 

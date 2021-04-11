@@ -3,9 +3,35 @@
 
 <head data-include="head">
     <title>Why we need a global thawra</title>
+    <style>
+        #loading {
+            background-color: #fff;
+            height: 100%;
+            left: 0;
+            opacity: 1;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 99;
+        }
+
+        #loading-image {
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 100;
+        }
+    </style>
 </head>
 
 <body id="privacy-policy">
+<div id="loading">
+    <img id="loading-image" src="images/logo_MM-text.png" alt="Loading..." />
+</div>
+
 
 <div data-include="menu"></div>
 <!-- END nav -->
@@ -230,10 +256,6 @@
 </section>
 
 <div data-include="footer"></div>
-
-<!-- loader -->
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
