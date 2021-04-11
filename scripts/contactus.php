@@ -99,8 +99,8 @@ if (isset($_REQUEST['type']) && !empty($_REQUEST['type'])) {
             $messageBody .= "<p><strong>email:</strong> {$_REQUEST['email']}</p>";
             if (isset($_REQUEST['message']))
                 $messageBody .= "<p><strong>Why are you signing:</strong> {$_REQUEST['message']}</p>";
-            $sent = sendMail("rita.rouhban@gmail.com", "", "Manifesto signature", $messageBody);
-            //  $sent = sendMail($tech_team, "", "", $messageBody);
+            // $sent = sendMail("rita.rouhban@gmail.com", "", "Manifesto signature", $messageBody);
+            $sent = sendMail($tech_team, "", "", $messageBody);
             if ($sent)
                 echo "sent successfully";
             else
@@ -116,8 +116,8 @@ if (isset($_REQUEST['type']) && !empty($_REQUEST['type'])) {
             $messageBody = "<p><strong>Name:</strong> {$_REQUEST['name']}</p>";
             $messageBody .= "<p><strong>email:</strong> {$_REQUEST['email']}</p>";
             $messageBody .= "<p><strong>Message:</strong> {$_REQUEST['message']}</p>";
-            $sent = sendMail("rita.rouhban@gmail.com", "", $_REQUEST['subject'], $messageBody);
-            //$sent = sendMail($communication_committee, "", $_REQUEST['subject'], $messageBody);
+            // $sent = sendMail("rita.rouhban@gmail.com", "", $_REQUEST['subject'], $messageBody);
+            $sent = sendMail($communication_committee, "", $_REQUEST['subject'], $messageBody);
             if ($sent)
                 echo "sent successfully";
             else
@@ -135,17 +135,17 @@ if (isset($_REQUEST['type']) && !empty($_REQUEST['type'])) {
             if (isset($_REQUEST['message']))
                 $messageBody .= "<p><strong>Message:</strong> {$_REQUEST['message']}</p>";
             if ($_REQUEST['city'] == "other") {
-                $sent = sendMail("rita.rouhban@gmail.com", "", "New Member", $messageBody . "city email = " . $city_email);
-                // $sent = sendMail($networking_committee, "", "New Member", $messageBody);
+                // $sent = sendMail("rita.rouhban@gmail.com", "", "New Member", $messageBody . "city email = " . $city_email);
+                $sent = sendMail($networking_committee, "", "New Member", $messageBody);
                 if ($sent)
                     echo "sent successfully";
                 else
                     echo "Error occured";
             } else {
                 $city_email = $cities[$_REQUEST['city']] . "@meghterbin-mejtemiin.com";
-                $sent = sendMail("rita.rouhban@gmail.com", "", "New Member", $messageBody . "city email = " . $city_email);
-                // $sent = sendMail($city_email, "", "New Member", $messageBody);
-                //sendMail($networking_committee, "", "New Member", $messageBody);
+                //$sent = sendMail("rita.rouhban@gmail.com", "", "New Member", $messageBody . "city email = " . $city_email);
+                $sent = sendMail($city_email, "", "New Member", $messageBody);
+                sendMail($networking_committee, "", "New Member", $messageBody);
                 if ($sent)
                     echo "sent successfully";
                 else
