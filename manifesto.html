@@ -91,7 +91,7 @@
                         <strong>Thank you for signing the manifesto for a global thawra!</strong>
                     </div>
                     <div class="alert alert-warning d-none" role="alert">
-                        Make sure you've filled out the form correctly & agreed to our Private Policy.
+                        Make sure you've filled out the form correctly & agreed to our <a target="_blank" href="privacy-policy.html">Privacy Policy</a>.
                     </div>
                     <div class="alert alert-danger d-none" role="alert">
                         <strong>Error !</strong> Please try again later.
@@ -137,6 +137,7 @@
         const formName = $("#form_name");
         const formEmail = $("#form_email");
         const formMessage = $("#form_message");
+        const formCity = $("#form_city");
 
         const formNameEmpty = formName.val() === "";
         const formEmailEmpty = formEmail.val() === "";
@@ -178,7 +179,8 @@
                 type: 'join',
                 name: formName.val(),
                 email: formEmail.val(),
-                message: formMessage.val()
+                message: formMessage.val(),
+                city: formCity.val(),
             };
 
             $.ajax({
