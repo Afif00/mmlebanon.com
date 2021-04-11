@@ -116,11 +116,15 @@ h5,
 }
 
 .slider-text .bread {
+    left: 0;
     font-size: 3rem;
     font-weight: 600 !important;
     margin-bottom: 0 !important;
-    margin-top: 5rem;
+    position: absolute;
+    right: 0;
     text-transform: uppercase;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .slider-text .bread span {
