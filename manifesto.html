@@ -137,7 +137,6 @@
         const formName = $("#form_name");
         const formEmail = $("#form_email");
         const formMessage = $("#form_message");
-        const formCity = $("#form_city");
 
         const formNameEmpty = formName.val() === "";
         const formEmailEmpty = formEmail.val() === "";
@@ -156,7 +155,6 @@
             formName.val('');
             formEmail.val('');
             formMessage.val('');
-            formCity.val('us-dc');
             policy.prop( "checked", false );
         }
 
@@ -179,8 +177,7 @@
                 type: 'join',
                 name: formName.val(),
                 email: formEmail.val(),
-                message: formMessage.val(),
-                city: formCity.val(),
+                message: formMessage.val()
             };
 
             $.ajax({
