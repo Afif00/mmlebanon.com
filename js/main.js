@@ -270,7 +270,7 @@ AOS.init({
 	})
 
 	$(window).on('load', function() { // makes sure the whole site is loaded
-		$('#loading-image').fadeOut(); // will first fade out the loading animation
+		$('#loading-image').hide(); // will first fade out the loading animation
 		$('#loading').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
 		$('body').delay(350).css({'overflow':'visible'});
 	})
